@@ -32,7 +32,23 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
+
+        addSettings(menu);
+
         return true;
+    }
+
+    private void addSettings(Menu menu) {
+        MenuItem settingsItem = menu.findItem(R.id.action_settings);
+        settingsItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                getFragmentManager().beginTransaction()
+                        .replace(R.id.fragment, new SettingsFragment())
+                        .commit();
+                return true;
+            }
+        });
     }
 
     @Override

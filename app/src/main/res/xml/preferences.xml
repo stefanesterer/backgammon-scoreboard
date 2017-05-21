@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+        android:key="name_player_one"
+        android:title="@string/name_player_one"
+        android:defaultValue="@string/name_player_one_default" />
+
+    <EditTextPreference
+        android:key="name_player_two"
+        android:title="@string/name_player_two"
+        android:defaultValue="@string/name_player_two_default" />
+
+</PreferenceScreen>
